@@ -5,30 +5,64 @@ from django.utils import timezone
 from .models import Post
 
 
-# tag_choices = ('SNT Council', 'Games and Sports', 'Cultural')
-tag_choices = (
-    ('SNT Council', 'SNT Council'),
-    ('Games and Sports', 'Games and Sports'),
-    ('Cultutal Council', 'Cultutal Council'),
-    ('FMC', 'FMC'),
-    ('Vox Populi', 'Vox Populi'),
-    ('Senate', 'Senate')
-)
 
-class PostForm(forms.ModelForm):
-    content = forms.CharField(widget=PagedownWidget(show_preview=False))
+
+class PostForm1(forms.ModelForm):
+    experience_required = forms.CharField(widget=PagedownWidget(show_preview=False))
     publish = forms.DateField(widget=forms.SelectDateWidget(),initial=timezone.now())
-    tags = forms.MultipleChoiceField(
-        required=True,
-        widget=forms.CheckboxSelectMultiple,
-        choices=tag_choices,)
+    
     class Meta:
         model = Post
         fields = [
             "title",
-            "content",
-            "image",
+            "salary",
+            "experience_required",
             "draft",
             "publish",
-            "tags",
+            
+            "field1",
+            "field2",
+            "field3",
+            "field4",
+            "field5",  
+        ]
+
+class PostForm2(forms.ModelForm):
+    experience_required = forms.CharField(widget=PagedownWidget(show_preview=False))
+    publish = forms.DateField(widget=forms.SelectDateWidget(),initial=timezone.now())
+    
+    class Meta:
+        model = Post
+        fields = [
+            "title",
+            "salary",
+            "experience_required",
+            "draft",
+            "publish",
+            
+            "field1",
+            "field2",
+            "field3",
+            "field4",
+            "field5",  
+        ]
+
+class PostForm3(forms.ModelForm):
+    experience_required = forms.CharField(widget=PagedownWidget(show_preview=False))
+    publish = forms.DateField(widget=forms.SelectDateWidget(),initial=timezone.now())
+    
+    class Meta:
+        model = Post
+        fields = [
+            "title",
+            "salary",
+            "experience_required",
+            "draft",
+            "publish",
+            
+            "field1",
+            "field2",
+            "field3",
+            "field4",
+            "field5",  
         ]

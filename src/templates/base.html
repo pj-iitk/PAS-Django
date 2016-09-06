@@ -46,69 +46,9 @@ fjs.parentNode.insertBefore(js, fjs);
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="/">Gymkhana <font color='red'>L!ve</font></a>
+          <a class="navbar-brand" href="/">Placement Automation System</font></a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Link</a></li> -->
-            <li class="dropdown" font-color='white'>
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style='font-color:white;' id="drop">SNT Council <span class="caret"></span></a>
-              <ul class="dropdown-menu" class="header_font" style="font-color:white;">
-                <li><a href="/snt">Home</a></li>
-                <li role="separator" class="divider"></li>  
-                <li class='header_font'><a href="#">Robotics Club</a></li>
-                <li><a href="#">Electronics Club</a></li>
-                <li><a href="#">Programming Club</a></li>
-                
-                <li><a href="#">Aeromodelling Club</a></li>
-                <!-- <li role="separator" class="divider"></li> -->
-                <!-- <li><a href="#">One more separated link</a></li> -->
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games and Sports <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="/game">Home</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Athletics</a></li>
-                <li><a href="#">Basketball</a></li>
-                <li><a href="#">Football</a></li>
-                <li><a href="#">Badminton</a></li>
-                <li><a href="#">Table Tennis</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cultural Council <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="/cultural">Home</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Dance</a></li>
-                <li><a href="#">Music</a></li>
-                <li><a href="#">Drama</a></li>
-                <!-- <li role="separator" class="divider"></li> -->
-                <li><a href="#">HSS</a></li>
-                <!-- <li role="separator" class="divider"></li> -->
-                <li><a href="#">ELS</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FMC <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="/fmc">Home</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Photography</a></li>
-                <li><a href="#">Animation</a></li>
-                <li><a href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li><a href="/vox">Vox Populi</a></li>
-            <li><a href="/senate">Senate</a></li>
-          </ul>
-
-          
           <ul class="nav navbar-nav navbar-right">
             {% if not request.user.is_authenticated %}
             <li class='pull-right'><a href='{% url "register" %}'>Register</a></li>
@@ -116,17 +56,7 @@ fjs.parentNode.insertBefore(js, fjs);
             {% else %}
             <li class='pull-right'><a href='{% url "logout" %}'>Logout</a></li>
             {% endif %}
-            <!-- <li><a href="#">Link</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </li> -->
+            
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

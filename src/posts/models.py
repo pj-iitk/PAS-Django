@@ -49,15 +49,20 @@ class Post(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
     title = models.CharField(max_length=120)
     slug = models.SlugField(unique=True)
-    image = models.ImageField(upload_to=upload_location, 
-            null=True, 
-            blank=True, 
-            width_field="width_field", 
-            height_field="height_field")
-    height_field = models.IntegerField(default=0)
-    width_field = models.IntegerField(default=0)
-    content = models.TextField()
-    tags=models.CharField(max_length=120,  null=True, blank=False)
+    
+    salary = models.TextField()
+    experience_required = models.TextField()
+    field1 = models.TextField()
+    field2 = models.TextField()
+    field3 = models.TextField()
+    field4 = models.TextField()
+    field5 = models.TextField()
+    field6 = models.TextField()
+    field7 = models.TextField()
+    field8 = models.TextField()
+    field9 = models.TextField()
+    field10 = models.TextField()
+    # tags=models.CharField(max_length=120,  null=True, blank=False)
     draft = models.BooleanField(default=False)
     publish = models.DateField(auto_now=False, auto_now_add=False)
     read_time =  models.IntegerField(default=0) # models.TimeField(null=True, blank=True) #assume minutes
@@ -82,8 +87,8 @@ class Post(models.Model):
         ordering = ["-timestamp", "-updated"]
 
     def get_markdown(self):
-        content = self.content
-        markdown_text = markdown(content)
+        experience_required = self.experience_required
+        markdown_text = markdown(experience_required)
         return mark_safe(markdown_text)
 
     @property
@@ -115,7 +120,7 @@ def pre_save_post_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = create_slug(instance)
 
-    if instance.content:
+    if instance.experience_required:
         html_string = instance.get_markdown()
         read_time_var = get_read_time(html_string)
         instance.read_time = read_time_var
